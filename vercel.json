@@ -1,0 +1,8 @@
+{
+    "functions": {
+        "api/*.go": {}
+    },
+    "trailingSlash": true,
+    "regions": ["hnd1"]
+
+}
