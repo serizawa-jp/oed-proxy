@@ -31,10 +31,9 @@ func NewOxfordClient(httpClient *http.Client) *OxfordClient {
 	}
 }
 
-func (c *OxfordClient) Word(appID, appKey string, plang *string, word string) (*EntriesResponse, error) {
-	lang := defaultLang
-	if plang != nil {
-		lang = *plang
+func (c *OxfordClient) Word(appID, appKey string, lang string, word string) (*EntriesResponse, error) {
+	if lang == "" {
+		lang = defaultLang
 	}
 	urlPath := fmt.Sprintf("/entries/%s/%s", lang, word)
 	const allFields = "definitions,domains,etymologies,examples,pronunciations"
