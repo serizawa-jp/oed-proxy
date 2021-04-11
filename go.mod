@@ -1,4 +1,4 @@
-module github.com/serizawa-jp/oald-proxy
+module github.com/serizawa-jp/oed-proxy
 
 go 1.15
 

@@ -9,8 +9,8 @@ import (
 	"github.com/go-chi/cors"
 	"github.com/go-chi/httplog"
 	"github.com/go-chi/render"
-	"github.com/serizawa-jp/oald-proxy/client"
-	errpkg "github.com/serizawa-jp/oald-proxy/error"
+	"github.com/serizawa-jp/oed-proxy/client"
+	errpkg "github.com/serizawa-jp/oed-proxy/error"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
@@ -52,7 +52,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		render.DefaultResponder(w, r, v)
 	}
 	mux.Get("/*", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("oald-proxy"))
+		w.Write([]byte("oed-proxy"))
 		w.WriteHeader(http.StatusOK)
 	})
 
